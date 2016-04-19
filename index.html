@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="supply in supplies.items">
+          <tr ng-repeat="supply in supplies.items | orderBy:'name'">
             <td>{{supplies.capitalize(supply.name)}}</td>
             <td><input type="checkbox" ng-checked="supply.inCountry"></td>
             <td><input type="checkbox" ng-checked="supply.globally"></td>
