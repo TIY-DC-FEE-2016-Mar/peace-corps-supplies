@@ -6,8 +6,6 @@
     .controller("SuppliesController", SuppliesController);
 
   function SuppliesController() {
-    this.user = "James";
-
     this.items = [
       { name: "bandages", inCountry: false, globally: true, description: "A bandage is a piece of material used either to support a medical device such as a dressing or splint, or on its own to provide support to or to restrict the movement of a part of the body." },
       { name: "advil", inCountry: true, globally: true, description: "Ibuprofen, from isobutylphenylpropanoic acid, is a nonsteroidal anti-inflammatory drug (NSAID) used for treating pain, fever, and inflammation." },
