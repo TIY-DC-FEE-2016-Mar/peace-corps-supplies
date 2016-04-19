@@ -8,6 +8,9 @@
     <script src="js/main.js"></script>
     <script src="js/controllers/supplies.js"></script>
     <style type="text/css">
+      .unavailable {
+        text-decoration: line-through;
+      }
     </style>
   </head>
   <body>
@@ -26,12 +29,15 @@
         </thead>
         <tbody>
           <tr ng-repeat="supply in supplies.items | filter:supplies.searchQuery | orderBy:supplies.sortOrder">
-            <td>{{supplies.capitalize(supply.name)}}</td>
+            <td ng-class="{unavailable: !supply.inCountry || !supply.globally}">
+              {{supplies.capitalize(supply.name)}}
+            </td>
             <td><input type="checkbox" ng-checked="supply.inCountry"></td>
             <td><input type="checkbox" ng-checked="supply.globally"></td>
           </tr>
         </tbody>
       </table>
+
       <p>New item name: {{supplies.newItemName}}</p>
 
       <input ng-model="supplies.newItemName" type="text" placeholder="Add an Item" class="form-control">
