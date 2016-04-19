@@ -21,6 +21,15 @@
 
     this.newItemName = "";
 
+    this.sortOrder = "name";
+    this.reverse = function reverse() {
+      if (this.sortOrder === "name") {
+        this.sortOrder = "-name";
+      } else {
+        this.sortOrder = "name";
+      }
+    }
+
     this.save = function saveItem() {
       console.log("Saving");
       var newItem = {

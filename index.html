@@ -16,13 +16,15 @@
       <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th></th>
+            <th>
+              <button class="btn btn-default btn-xs" ng-click="supplies.reverse()">Reverse</button>
+            </th>
             <th>In Country</th>
             <th>Global</th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="supply in supplies.items | orderBy:'name'">
+          <tr ng-repeat="supply in supplies.items | orderBy:supplies.sortOrder">
             <td>{{supplies.capitalize(supply.name)}}</td>
             <td><input type="checkbox" ng-checked="supply.inCountry"></td>
             <td><input type="checkbox" ng-checked="supply.globally"></td>
@@ -30,7 +32,7 @@
         </tbody>
       </table>
       <p>New item name: {{supplies.newItemName}}</p>
-      
+
       <input ng-model="supplies.newItemName" type="text" placeholder="Add an Item" class="form-control">
       <button class="btn btn-primary" ng-click="supplies.save()">
         <i class="glyphicon glyphicon-plus"></i>
