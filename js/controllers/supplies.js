@@ -19,8 +19,7 @@
       return word[0].toUpperCase() + word.substring(1);
     }
 
-    this.newItemName = "";
-
+    // Sorting
     this.sortOrder = "name";
     this.reverse = function reverse() {
       if (this.sortOrder === "name") {
@@ -30,6 +29,10 @@
       }
     }
 
+    // Filtering
+    this.searchQuery = "";
+
+    this.newItemName = "";
     this.save = function saveItem() {
       console.log("Saving");
       var newItem = {

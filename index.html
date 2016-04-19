@@ -13,6 +13,7 @@
   <body>
     <section class="container" ng-controller="SuppliesController as supplies">
       <p>Welcome, {{supplies.user}}</p>
+      <input ng-model="supplies.searchQuery" type="text" class="form-control">
       <table class="table table-striped table-hover">
         <thead>
           <tr>
@@ -24,7 +25,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="supply in supplies.items | orderBy:supplies.sortOrder">
+          <tr ng-repeat="supply in supplies.items | filter:supplies.searchQuery | orderBy:supplies.sortOrder">
             <td>{{supplies.capitalize(supply.name)}}</td>
             <td><input type="checkbox" ng-checked="supply.inCountry"></td>
             <td><input type="checkbox" ng-checked="supply.globally"></td>
