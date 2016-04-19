@@ -36,9 +36,14 @@
       inCountry: true,
       globally: true
     };
-    this.save = function saveItem() {
-      this.items.push(this.newItem);
-      this.newItem = {};
+    this.save = function saveItem(form) {
+      if (form.$valid) {
+        this.items.push(this.newItem);
+        this.newItem = {};
+      } else {
+        // FIXME: do something better here
+        alert("Something was wrong! Fix your form!");
+      }
     }
   }
 })();
