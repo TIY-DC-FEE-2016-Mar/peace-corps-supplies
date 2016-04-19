@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html ng-app="zoo-thing" lang="en-utf8">
+<html ng-app="medlink" lang="en-utf8">
   <head>
     <meta charset="utf-8">
-    <title>Zoo Thing</title>
+    <title>Peace Corps | Medlink</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="js/main.js"></script>
     <style type="text/css">
-      .extinct {
     </style>
   </head>
   <body>
     <div class="container">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>In Country</th>
+            <th>Global</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Advil</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="text" placeholder="Add an Item" class="form-control">
+      <button class="btn btn-primary">
+        <i class="glyphicon glyphicon-plus"></i>
+      </button>
     </div>
   </body>
 </html>
