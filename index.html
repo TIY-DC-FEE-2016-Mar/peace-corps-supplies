@@ -11,6 +11,10 @@
       .unavailable {
         text-decoration: line-through;
       }
+
+      input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+        border: 1px solid red;
+      }
     </style>
   </head>
   <body>
@@ -18,8 +22,8 @@
       <br>
 
       <form ng-submit="supplies.save()">
-        <input ng-model="supplies.newItem.name" type="text" placeholder="Add an Item" class="form-control">
-        <textarea ng-model="supplies.newItem.description" class="form-control"></textarea>
+        <input ng-model="supplies.newItem.name" type="text" required minlength="2" placeholder="Add an Item" class="form-control">
+        <textarea ng-model="supplies.newItem.description" required minlength="5" class="form-control"></textarea>
 
         <button class="btn btn-primary">
           <i class="glyphicon glyphicon-plus"></i>
