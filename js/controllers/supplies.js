@@ -31,16 +31,18 @@
     this.searchQuery = "";
 
     this.newItemName = "";
+    this.newItemDescription = "";
     this.save = function saveItem() {
       console.log("Saving");
       var newItem = {
         name: this.newItemName,
         inCountry: true,
         globally: true,
-        description: ""
+        description: this.newItemDescription
       };
       this.items.push(newItem);
       this.newItemName = "";
+      this.newItemDescription = "";
     }
   }
 })();
