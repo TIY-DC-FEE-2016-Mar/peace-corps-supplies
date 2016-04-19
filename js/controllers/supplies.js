@@ -24,12 +24,13 @@
     this.save = function saveItem() {
       console.log("Saving");
       var newItem = {
-        // name: this.newItemName,
+        name: this.newItemName,
         inCountry: true,
         globally: true,
         description: ""
       };
       this.items.push(newItem);
+      this.newItemName = "";
     }
   }
 })();

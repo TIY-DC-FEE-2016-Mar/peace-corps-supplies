@@ -29,7 +29,9 @@
           </tr>
         </tbody>
       </table>
-      <input type="text" placeholder="Add an Item" class="form-control">
+      <p>New item name: {{supplies.newItemName}}</p>
+      
+      <input ng-model="supplies.newItemName" type="text" placeholder="Add an Item" class="form-control">
       <button class="btn btn-primary" ng-click="supplies.save()">
         <i class="glyphicon glyphicon-plus"></i>
       </button>
