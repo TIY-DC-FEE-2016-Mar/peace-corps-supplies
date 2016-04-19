@@ -37,7 +37,6 @@
       globally: true
     };
     this.save = function saveItem() {
-      console.log("Saving", this.newItem);
       this.items.push(this.newItem);
       this.newItem = {};
     }
