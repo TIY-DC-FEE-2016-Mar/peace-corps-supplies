@@ -39,6 +39,7 @@
     this.save = function saveItem(form) {
       if (form.$valid) {
         this.items.push(this.newItem);
+        supplyStore.save(this.items);
         this.newItem = {};
       } else {
         // FIXME: do something better here

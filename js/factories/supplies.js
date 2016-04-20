@@ -17,8 +17,9 @@
     localStorage.setItem(localStorageKey, JSON.stringify(initial))
   }
 
-  function saveItem(item) {
-    console.log("should save", item);
+  function saveAllItems(items) {
+    console.log("should save", items);
+    localStorage.setItem(localStorageKey, JSON.stringify(items));
   }
 
   function supplyStore() {
@@ -26,7 +27,7 @@
     // return JSON.parse(localStorage.getItem(localStorageKey));
     return {
       data: JSON.parse(localStorage.getItem(localStorageKey)),
-      save: saveItem
+      save: saveAllItems
     };
   }
 })();
