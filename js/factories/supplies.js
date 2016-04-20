@@ -19,7 +19,7 @@
 
   function saveAllItems(items) {
     console.log("should save", items);
-    localStorage.setItem(localStorageKey, JSON.stringify(items));
+    localStorage.setItem(localStorageKey, angular.toJson(items));
   }
 
   function supplyStore() {
