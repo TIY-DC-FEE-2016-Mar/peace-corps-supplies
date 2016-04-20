@@ -22,6 +22,10 @@
       <br>
 
       <form novalidate name="createForm" ng-submit="supplies.save(createForm)">
+        <p class="form-error" ng-show="createForm.$invalid && createForm.$submitted">
+          Hey! There are errors!
+        </p>
+
         <input ng-model="supplies.newItem.name" type="text" required minlength="2" placeholder="Add an Item" class="form-control">
         <textarea ng-model="supplies.newItem.description" required minlength="5" class="form-control"></textarea>
 

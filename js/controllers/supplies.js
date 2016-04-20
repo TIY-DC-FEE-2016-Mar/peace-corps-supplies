@@ -42,7 +42,7 @@
         this.newItem = {};
       } else {
         // FIXME: do something better here
-        alert("Something was wrong! Fix your form!");
+        // alert("Something was wrong! Fix your form!");
       }
     }
   }
