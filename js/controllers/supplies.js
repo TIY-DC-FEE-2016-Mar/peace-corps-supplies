@@ -8,8 +8,6 @@
   SuppliesController.$inject = ["supplyStore"];
 
   function SuppliesController(items) {
-    console.log('items', items);
-
     this.items = items;
 
     this.capitalize = function capitalize(word) {
