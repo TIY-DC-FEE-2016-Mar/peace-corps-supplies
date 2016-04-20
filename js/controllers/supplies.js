@@ -7,8 +7,10 @@
 
   SuppliesController.$inject = ["supplyStore"];
 
-  function SuppliesController(items) {
-    this.items = items;
+  function SuppliesController(supplyStore) {
+    console.log('supplyStore is', supplyStore);
+
+    this.items = supplyStore.data;
 
     this.capitalize = function capitalize(word) {
       if (!word) { return ""; }

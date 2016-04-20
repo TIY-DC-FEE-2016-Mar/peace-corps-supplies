@@ -17,8 +17,16 @@
     localStorage.setItem(localStorageKey, JSON.stringify(initial))
   }
 
+  function saveItem(item) {
+    console.log("should save", item);
+  }
+
   function supplyStore() {
     console.log("Running the factory");
-    return JSON.parse(localStorage.getItem(localStorageKey));
+    // return JSON.parse(localStorage.getItem(localStorageKey));
+    return {
+      data: JSON.parse(localStorage.getItem(localStorageKey)),
+      save: saveItem
+    };
   }
 })();

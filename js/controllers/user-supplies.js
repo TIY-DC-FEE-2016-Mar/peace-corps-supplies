@@ -11,7 +11,7 @@
     this.availableSupplies = [];
 
     var that = this;
-    supplyStore.forEach(function(item) {
+    supplyStore.data.forEach(function(item) {
       if (item.inCountry && item.globally) {
         that.availableSupplies.push(item);
       }
