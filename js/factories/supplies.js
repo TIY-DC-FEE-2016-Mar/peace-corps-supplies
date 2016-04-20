@@ -19,6 +19,6 @@
 
   function supplyStore() {
     console.log("Running the factory");
-    return JSON.parse(localStorage.getItem(localStorageKey))
+    return JSON.parse(localStorage.getItem(localStorageKey));
   }
 })();
